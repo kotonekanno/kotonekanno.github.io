@@ -7,7 +7,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
   </head>
   <style>
-    .section .section p {
+    .section .section2 p ,
+    .section .section .section p{
       margin: 5px 0px;
       font-weight: bold;
     }
@@ -35,35 +36,40 @@
 
       <div class="section">
         <h3 style="margin-left: 10px; text-shadow: none;">簡野 琴音 (Kotone Kanno)</h3>
-        <p>2004年4月14日生　女<br>
-          サイバー大学 IT総合学部　在学中（2028年3月卒業予定）
-        </p><hr style="border-top: 1px dotted gray;">
+        <p>2004年4月14日生　女<p>
+        <p>サイバー大学 IT総合学部　在学中（2028年3月卒業予定）</p>
+        <!--<p>履歴書：</p>-->
+        <hr>
+        <p>バックエンド技術を中心に学習を進めています。</p>
         <p>
-          バックエンド技術を中心に学習を進めています。<br>
-          現在はアルバイトでフルスタック領域の運用・保守業務に携わりつつ、大型の機能追加や、<br>
-          既存システム（Play Framework）を元にしたスマホアプリ版（Flutter）の開発にも参加しています。<br>
-          業務アプリケーション開発に興味があり、将来的にはSIerで活躍することを目指しています。
+          現在はアルバイトでフルスタック領域の運用・保守業務に携わりつつ、大型の機能追加や、
+          既存システム（Play Framework）を元にしたスマホアプリ版（Flutter）の開発にも参加しています。
         </p>
+        <p>業務アプリケーション開発に興味があり、将来的にはSIerで活躍することを目指しています。</p>
       </div>
 
       <div style="display: flex;">
+
         <div class="section" style="flex: 4;">
-          <h3>資格</h3>
+          <h3 style="color:rgb(116, 32, 32);">資格</h3>
           <ul>
-            <li>ITパスポート（2025年3月取得）</li>
+            <li>ITパスポート（2025年4月取得）</li>
             <li>基本情報技術者試験</li>
-            <li>英検準1級</li>
+            <li>英検準1級（2024年2月取得）</li>
           </ul>
         </div>
+
         <div class="section" style="flex: 3;">
           <h3>目次</h3>
-          <ul>
+          <ul style="list-style: circle;">
             <li><a href="#skill-sec">スキル</a></li>
+            <li><a href="#std-sec">実務経験</a></li>
             <li><a href="#pos-sec">希望職種・業界</a></li>
+            <!--<li><a href="#gkck-sec">これまでの取り組み</a></li>-->
             <li><a href="#pr-sec">自己PR</a></li>
-            <li><a href="#std-sec">学習姿勢</a></li>
           </ul>
         </div>
+
       </div>
 
       <div class="section target-section" id="skill-sec">
@@ -119,10 +125,17 @@
                 <li>個人開発で使用（GitHub）</li>
               </ul>
             </div>
+            <div class="section section2"><p>Bash</p>
+              <ul>
+                <li>学校の授業で学習</li>
+                <li>実務（アルバイト）で使用</li>
+                <li>個人で使用</li>
+              </ul>
+            </div>
             <div class="section section2"><p>SQL</p>
               <ul>
                 <li>学校の授業で学習 + 独学</li>
-                <li>実務（アルバイト）で使用（CoffeeScript）</li>
+                <li>実務（アルバイト）で使用</li>
                 <li>個人開発で使用</li>
               </ul>
             </div>
@@ -144,39 +157,151 @@
 
       </div>
 
-      <div class="section target-section" id="pos-sec">
-        <h3>希望職種・業界</h3>
-        <p>バックエンド志向のフルスタックエンジニアを志望しています。<br>
-           
-        </p>
+      <div class="section target-section" id="std-sec">
+        <h2>実務経験</h2>
+
+        <div class="section">
+          <h3>小規模Web開発会社（アルバイト）</h3>
+            <p>2025年7月〜在籍中<br>
+               担当プロジェクト：オンラインオークションサイト（運用・保守）</p>
+
+          <div class="section">
+            <p>担当業務</p>
+            <ul>
+              <li>監視システムの改善：複数台構成のサーバーへ効率的に接続する処理の最適化（Python）</li>
+              <li>アクセスログ拡張：IPアドレス・端末情報の記録追加（MySQL）</li>
+              <li>大型機能追加に伴うフロント改修（HTML / CSS / JavaScript）</li>
+              <li>Webフロントの軽微なUI修正（HTML / CSS / JavaScript）</li>
+              <li>Flutterアプリへの移行作業（主にフロント部分を担当）</li>
+            </ul>
+          </div>
+
+          <div class="section" style="width: max-content;">
+            <p>使用技術</p>
+            <ul style="list-style: circle;">
+              <li>Scala / Play Framework（管理・公開APIサーバー）</li>
+              <li>Python（監視ツール・バッチ処理）</li>
+              <li>HTML / CSS / JavaScript（Webフロント）</li>
+              <li>Dart / Flutter（スマホアプリ開発）</li>
+              <li>Docker（開発環境・コンテナ管理）</li>
+              <li>GitLab（リポジトリ管理・CI）</li>
+              <li>AWS / Linuxサーバー運用</li>
+              <li>HTTP / WebSocket</li>
+              <li>MySQL</li>
+            </ul>
+          </div>
+
+        </div>
+
+        <div class="section">
+          <h3>個人開発</h3>
+          <p>複数のWebアプリケーションを開発しています。
+            詳細は<a href="projects.html">プロジェクト</a>をご覧ください。</p>
+        </div>
+
       </div>
 
+      <div class="section target-section" id="pos-sec">
+        <h2>希望職種・業界</h2>
+        <p><strong>バックエンド</strong>を軸にした<strong>フルスタックエンジニア</strong>を志望しています。<p>
+        <p>また、<strong>業務システム</strong>や実用性の高いソフトウェアの開発に関心があり、特に企業向けのプロダクト開発に携わりたいと考えています。</p>
+        <hr>
+
+        <div class="inner-section">
+          <h3>志望理由</h3>
+          <p>
+            子供の頃から、利用するシステムの仕組みを分析し、裏側のルールを推測しながら使いこなすことが得意でした。
+          </p><p>
+            アルバイトで歯科医院の受付として勤務した際には、カルテ管理・予約管理といったシステムに触れ、
+            現場を支えるアプリケーションの重要性と、その設計の巧みさに改めて魅力を感じました。
+          </p><p>
+            個人開発においても、バックエンドの構造を合理的に設計し、システム全体を効率化する過程に強い楽しさを覚えており、
+            現場で役立つ堅実なサービスづくりに携わりたいという考えに至りました。
+          </p>
+        </div>
+
+      </div>
+
+      <!--<div class="section target-section" id="gkck-sec">
+        <h2>これまでの取り組み</h2>
+        
+        <div class="section section2">
+          <h3>小規模Web開発会社でのアルバイト</h3>
+          <p></p>
+        </div>
+
+        <div class="section section2">
+          <h3>カナダでのワーキングホリデー</h3>
+          <p></p>
+        </div>
+
+        <div class="section section2">
+          <h3>イベント警備アルバイト</h3>
+          <p></p>
+        </div>
+      </div>-->
+      
       <div class="section target-section" id="pr-sec">
         <h2>自己PR</h2>
+        <p class="description">
+          自分の強みとして、<strong>論理的</strong>に学ぶ姿勢、目標に向けて行動し続ける<strong>主体性</strong>、
+          そして環境への<strong>適応力</strong>と<strong>協調性</strong>を特に大切にしています。<br>
+          以下では、それぞれを具体的な経験とともに紹介しています。
+        </p>
 
-        <h3>論理的思考力</h3>
-        <p>複雑な課題に対して情報を整理し、問題点を段階的に切り分けて解決策を導き出すことを得意としています。</p>
+        <div class="section">
+          <h3>論理的思考力</h3>
+          <p>
+            情報を階層的に整理し、全体像を把握しながら理解することが得意です。
+            学習内容をそのまま暗記するのではなく、要素を分解して構造化し、自分の言葉で再整理することで定着させるスタイルを取っています。
+          </p><p>
+            実務で初めてScala / Play Frameworkに触れた際は、独学で得た知識を自分にとって理解しやすい形に噛み砕き、Markdownにまとめました。
+            コードを読み進めながらその内容を参照することで、基礎を押さえつつ実践的な理解へ繋げるという、自分に最も適した学習方法を確立することができました。
+          </p><p>
+            <a href="study_log.html">学習記録</a>に掲載している「Study Note」リポジトリでは、このように体系化した知識を継続的に蓄積しています。
+            本リポジトリを通して、知識を一般化し、構造を把握した上で自分の学習へ応用していくという、私の学習姿勢を感じ取っていただけるかと思います。
+          </p>
+        </div>
         
-        <h3>向上心</h3>
-        <p>新しい技術を積極的に学び、実践で使えるレベルまで習得することを継続しています。
-          <br> 学んだ内容は個人開発やアルバイト業務で試し、知識を経験として定着させています。
-        </p>
+        <div class="section">
+          <h3>主体性</h3>
+          <p>
+            明確な目標に向けて、自分で計画を立て、継続的に実行する力があります。
+          </p><p>
+            現在は、エンジニアとしての技術力を高めることと、英語を習得することの二つを大きな目標として取り組んでいます。
+            これらを達成するため、通信制大学での学習を進めながら、アルバイト、プログラミングの独学、資格学習、そして英語学習を並行して行ってきました。
+          </p><p>
+            来年はワーキングホリデーでカナダに滞在し、語学学校とアルバイトに取り組みつつ、大学の学習や独学も継続する予定です。
+          </p><p>
+            このように、長期的な目標に向けて計画を立て、必要な取り組みを進めていく主体性と実行力があります。
+            また、目標に向けて継続的に学ぶ過程そのものに価値を感じており、
+            学び続ける姿勢が求められるITエンジニアという職種は、自分の特性に適していると強く感じています。
+          </p>
+        </div>
 
-        <h3>継続力</h3>
-        <p>学習ログの記録やプロジェクトの更新を続け、習慣として技術に触れ続けています。</p>
-      </div>
+        <div class="section">
+          <h3>適応力／協調性</h3>
+          <p>
+            流動的な環境に適応し、周囲と協力しながら円滑に業務を進めることができます。
+          </p><p>
+            イベント警備のアルバイトでは、毎回現場やメンバーが異なる中で、多くのスタッフと連携しながら働くことが求められました。
+          </p><p>
+            2年近く継続して働く中で、周囲との関係も自然に築けるようになり、車両の受付など状況判断が必要な配置を任される機会が増えました。
+            また、隊長の補助として全体の状況を把握し、必要に応じてサポートに入る役割を担当したこともありました。
+          </p><p>
+            年齢層が幅広く、初対面の人と協力することが多い現場でしたが、そのような環境にも落ち着いて適応しながら取り組むことができたと思います。
+          </p><p>
+            この経験を通して、初めての状況にも適切に対処し、周囲と調整しながら物事を進めていく姿勢が身につきました。
+            異なるバックグラウンドを持つ人との協働を円滑に進められるという特性を、今後の開発現場でも活かしていきたいと考えています。
+          </p>
+        </div>
 
-      <div class="section target-section" id="std-sec">
-        <h3>学習姿勢</h3>
-        <p>
-          
-        </p>
       </div>
 
     </div>
 
     <footer style="text-align: center;">
-      <p>© 2025 簡野 琴音 - ポートフォリオ</p>
+      <p>© 2025　簡野 琴音 - ポートフォリオ　|　最終更新日：2025-12-12</p>
     </footer>
 
     <script src="assets/javascript/script.js"></script>

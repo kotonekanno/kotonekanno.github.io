@@ -4,17 +4,23 @@ body {
   background-color: #f7f8fa;
   font-family: 'Yu Gothic';
 }
-h2 { text-shadow: 1px 1px 2px gray; }
+h2 {
+  text-shadow: 1px 1px 2px gray;
+  color:rgb(116, 32, 32);
+}
 h3 { text-shadow: 0.5px 0.5px 2px lightgray; }
 h2, h3 { margin: 10px 0px; }
 p { margin: 5px 0px; }
-a { color: black; }
-a:hover { color: rgb(116, 32, 32); }
+a { color: rgb(116, 32, 32); }
+a:hover { color: red; }
 ul { margin: 0; }
 ul ul { padding-left: 20px; }
 details { padding: 5px;}
 details summary:hover { color: rgb(116, 32, 32);}
 details[open] { background-color: #f0f0f0;}
+hr { border-top: 1px dotted gray; }
+
+.disabled { color: gray; }
 
 .container {
   width: 900px;
@@ -27,6 +33,7 @@ details[open] { background-color: #f0f0f0;}
 }
 
 header {
+  width: 100%;
   padding: 10px 20px 0px 20px;
   background-color: rgb(116, 32, 32);
   text-align: center;
@@ -116,9 +123,6 @@ header {
 .section p {
   padding-inline-start: 10px;
 }
-.section .flex-box h2 {
-  color:rgb(116, 32, 32);
-}
 .section2 {
   box-shadow: 0.5px 1px 5px lightgray;
   background-color: rgb(241, 216, 216);
@@ -126,6 +130,7 @@ header {
 .description {
   margin-bottom: 15px;
 }
+.inner-section { padding-left: 10px; }
 
 .carousel {
   position: relative;
@@ -173,4 +178,33 @@ header {
 @keyframes flash {
   0%   { background-color: lightgray; }
   100% { background-color: white; }
+}
+
+.skill-popup {
+  position: relative;
+  display: inline-block;
+  padding: 5px;
+  color: rgb(116, 32, 32);
+}
+.skill-popup:hover { color: black; }
+.toggle { display:none; }
+label {
+  cursor: pointer;
+  text-decoration: underline;
+}
+.popup-content {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  background: rgb(241, 216, 216);
+  border: 1px solid #ccc;
+  padding: 10px 25px 10px 5px;
+  border-radius: 10px;
+  z-index: 10;
+  white-space: nowrap;
+  color: black;
+}
+.toggle:checked + label + .popup-content {
+  display: block;
 }
