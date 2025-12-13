@@ -3,6 +3,7 @@ body {
   align-items: center;
   background-color: #f7f8fa;
   font-family: 'Yu Gothic';
+  overflow-x: hidden;
 }
 h2 {
   text-shadow: 1px 1px 2px gray;
@@ -10,7 +11,10 @@ h2 {
 }
 h3 { text-shadow: 0.5px 0.5px 2px lightgray; }
 h2, h3 { margin: 10px 0px; }
-p { margin: 5px 0px; }
+p {
+  margin: 0px;
+  padding: 5px 0px;
+}
 a { color: rgb(116, 32, 32); }
 a:hover { color: red; }
 ul { margin: 0; }
@@ -24,21 +28,17 @@ hr { border-top: 1px dotted gray; }
 
 .container {
   width: 900px;
-  margin: 30px auto;
-  padding: 0 20px;
+  margin: auto;
 }
 .flex-box {
   display: flex;
   justify-content: space-between;
 }
 
-header {
-  width: 100%;
-  padding: 10px 20px 0px 20px;
+.header {
   background-color: rgb(116, 32, 32);
   text-align: center;
   color: white;
-  box-shadow: 5px 5px 10px gray;
 }
 .tag {
   border-radius: 5px;
@@ -47,14 +47,20 @@ header {
   background-color: rgb(241, 216, 216);
   color: rgb(116, 32, 32);
 }
+
+#sticky-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  margin-bottom: 20px;
+  box-shadow: 5px 5px 10px gray;
+}
 #menu-bar {
   display: flex;
   justify-content: center;
-  margin-top: 20px;
   text-align: center;
   font-size: 18px;
   font-weight: bold;
-  color: white;
 }
 #menu-bar a {
   text-decoration: none;
@@ -65,7 +71,6 @@ header {
   height: 30px;
   width: 200px;
   margin-bottom: 0;
-  padding-top: 3px;
 }
 .enabled {
   cursor: pointer;
