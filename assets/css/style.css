@@ -178,6 +178,7 @@ hr { border-top: 1px dotted gray; }
 }
 
 .target-section:target {
+  scroll-margin-top: 50px;
   animation: flash 1.5s ease;
 }
 @keyframes flash {
@@ -212,4 +213,36 @@ label {
 }
 .toggle:checked + label + .popup-content {
   display: block;
+}
+
+#sticky-toc {
+  position: sticky;
+  top: 50px;
+  text-align: right;
+  margin-top: -10px;
+  padding-right: 25px;
+}
+.toc-area {
+  position: relative;
+  display: inline-block;
+}
+.toc-panel {
+  position: absolute;
+  top: 0;
+  right: 100%;
+  width: 200px;
+  margin-right: 30px;
+  text-align: left;
+
+  opacity: 0;
+  transform: translateX(10px);
+  pointer-events: none;
+  transition: opacity .2s ease, transform .2s ease;
+}
+.toc-panel li {
+}
+#sticky-toc.open .toc-panel {
+  opacity: 1;
+  transform: translateX(0);
+  pointer-events: auto;
 }

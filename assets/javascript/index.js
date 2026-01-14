@@ -1,5 +1,4 @@
 // ページ遷移
-
 const sections = document.querySelectorAll('.slide .section');
 
 sections.forEach(section => {
