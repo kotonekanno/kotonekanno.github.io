@@ -51,6 +51,22 @@ img {
   background-color: rgb(241, 216, 216);
   color: rgb(116, 32, 32);
 }
+.tag2 {
+  background: rgb(116, 32, 32);
+  color: white;
+  font-size: 0.7em;
+  padding: 2px 6px;
+  margin-top: 2px;
+  border-radius: 6px;
+}
+.tag3 {
+  background: rgb(116, 32, 32);
+  color: white;
+  font-size: 0.7em;
+  padding: 2px 10px;
+  margin-top: 4px;
+  border-radius: 6px;
+}
 
 #sticky-header {
   position: sticky;
@@ -151,6 +167,7 @@ img {
   border-radius: 10px;
   background-color: white;
   box-shadow: 1px 2px 10px lightgray;
+  text-align: center;
 }
 
 .carousel {
