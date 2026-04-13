@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>簡野 琴音 - ポートフォリオ</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  </head>
+  <style>
+  </style>
+  <body>
+    <div class="header" style="padding-top: 10px;">
+      <div class="container">
+        <h1 style="font-size: 32px;">簡野 琴音 (Kotone Kanno)</h1>
+        <p style="margin-bottom: 25px;">大学2年 / ソフトウェアエンジニア志望</p>
+        <div style="padding-bottom: 15px;">
+          <span class="tag">サイバー大学 IT総合学部</span>
+          <span class="tag">卒業見込み: 2028年3月</span>
+          <span class="tag">就活: エンジニア職</span>
+        </div>
+      </div>
+    </div>
+    <div class="header" id="sticky-header">
+      <div class="container" id="menu-bar">
+        <a href="../index.html"><p class="menu enabled">ホーム</p></a>
+        <a href="../profile.html"><p class="menu enabled">プロフィール</p></a>
+        <a href="../projects.html"><p class="menu enabled" style="color: white; font-weight: bold;">プロジェクト</p></a>
+        <a href="../study_log.html"><p class="menu enabled">学習記録</p></a>
+      </div>
+    </div>
+
+    <div id="sticky-toc">
+      <div class="toc-area">
+        <button class="icon-btn"><i class="fa-solid fa-bars"></i></button>
+        <div class="section toc-panel" style="width: max-content;">
+          <h3>目次</h3>
+          <ul>
+            <li><a href="#top-sec">ページトップ</a></li>
+            <li><a href="#demo-sec">デモ</a></li>
+            <li><a href="#feature-sec">機能一覧</a></li>
+            <li><a href="#tech-sec">使用技術・選定理由</a></li>
+            <li><a href="#lesson-sec">苦労した点・学んだこと</a></li>
+            <li><a href="#dev-sec">今後の開発予定</a></li>
+            <li><a href="#doc-sec">開発ドキュメント</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container" style="margin-top: -60px;">
+      <h1 id="top-sec" style="scroll-margin-top: 60px; text-align: center;">映画記録アプリ</h1>
+      <div style="margin-bottom: 20px; text-align: center;">
+        <span style="margin-left: 10px; margin-right: 30px;">
+          <a href="https://github.com/kotonekanno/movie-review-log" target="_blank" rel="noopener">
+            <i class="fa-solid fa-up-right-from-square"></i>
+              GitHubリポジトリ
+          </a>
+        </span>
+        <span>
+          <a href="https://movie-log-frontend.vercel.app/login" target="_blank" rel="noopener">
+            <i class="fa-solid fa-up-right-from-square"></i>
+              デモ
+          </a>
+          （<a href="#demo-sec"><i class="fa-solid fa-arrow-right"></i>利用方法</a>）
+        </span>
+      </div>
+
+      <div class="section">
+        <h2>概要</h2>
+        <p>本アプリは、映画のレビューおよびウォッチリストをクラウド上で作成・管理できるWebアプリケーションです。</p>
+        <p>ユーザーが、他者の評価に影響されることなく、自身の直観的な感想を蓄積できるようにすることを目的としています。</p>
+        
+        <hr>
+
+        <div style="display: flex;">
+
+          <div class="inner-section" style="flex: 0 0 auto; margin-right: 50px;">
+
+            <div>
+              <h3>ターゲット</h3>
+              <ul>
+                <li>映画の感想を記録・整理したい人</li>
+                <li>観たい映画をウォッチリストとして管理したい人</li>
+              </ul>
+            </div>
+
+            <div>
+              <h3>課題定義</h3>
+              <ul>
+                <li>他者の評価に影響されずに、自分の感想のみを蓄積したい</li>
+                <li>映画鑑賞時の直観的な感想を手軽に記録したい</li>
+                <li>観たい映画を効率的に管理したい</li>
+              </ul>
+            </div>
+
+          </div>
+
+          <div class="section" style="flex: 1; width: max-content;">
+            <h3>目次</h3>
+            <ul>
+              <li><a href="#demo-sec">デモ</a></li>
+              <li><a href="#feature-sec">機能一覧</a></li>
+              <li><a href="#tech-sec">使用技術・選定理由</a></li>
+              <li><a href="#lesson-sec">苦労した点・学んだこと</a></li>
+              <li><a href="#dev-sec">今後の開発予定</a></li>
+              <li><a href="#doc-sec">開発ドキュメント</a></li>
+            </ul>
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="section target-section" id="demo-sec">
+        <h2>デモ</h2>
+
+        <div style="display: flex;">
+
+          <div style="flex: 1; display: flex; flex-direction: column;">
+
+            <div class="section" style="flex:1; display:flex; align-items:center; padding-top: 15px;">
+              <p>
+                <i class="fa-solid fa-globe"></i>
+                <a href="https://kotonekanno.github.io/it_dictionary/" target="_blank" rel="noopener">
+                  https://movie-log-frontend.vercel.app/login
+                </a>
+              </p>
+            </div>
+
+            <div class="section">
+              <h3>利用上の注意</h3>
+              <ul>
+                <li>テスト用アカウントでのみ利用可能です</li>
+                <li>初回アクセス時に数秒かかる場合があります（Render無料プラン）</li>
+              </ul>
+            </div>
+
+          </div>
+
+          <div class="section" style="flex:  0 0 auto;">
+            <h3>テストアカウント</h3>
+            <table class="styled-table">
+              <thead>
+                <tr>
+                  <th>メールアドレス</th>
+                  <th>パスワード</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>test1@test.com</td>
+                  <td>testtest</td>
+                </tr>
+                <tr>
+                  <td>test2@test.com</td>
+                  <td>testtest</td>
+                </tr>
+                <tr>
+                  <td>test3@test.com</td>
+                  <td>testtest</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+        </div>
+
+        <div class="section">
+          <h3>スクリーンショット</h3>
+
+          <div style="display: flex;">
+
+            <div style="flex: 1;">
+
+              <div class="img-section">
+                <a href="../assets/images/movie_log/review_list_page.png" target="_blank">
+                  <img src="../assets/images/movie_log/review_list_page.png">
+                </a>
+                <p style="text-align: center;">レビュー一覧画面</p>
+              </div>
+
+              <div class="img-section">
+                <a href="../assets/images/movie_log/review_edit_page.png" target="_blank">
+                  <img src="../assets/images/movie_log/review_edit_page.png">
+                </a>
+                <p style="text-align: center;">レビュー作成画面</p>
+              </div>
+
+              <div class="img-section">
+                <a href="../assets/images/movie_log/login_page.png" target="_blank">
+                  <img src="../assets/images/movie_log/login_page.png">
+                </a>
+                <p style="text-align: center;">ログイン画面</p>
+              </div>
+
+            </div>
+
+            <div style="flex: 1;">
+
+              <div class="img-section">
+                <a href="../assets/images/movie_log/watchlist_page.png" target="_blank">
+                  <img src="../assets/images/movie_log/watchlist_page.png">
+                </a>
+                <p style="text-align: center;">ウォッチリスト画面</p>
+              </div>
+
+              <div class="img-section">
+                <a href="../assets/images/movie_log/watchlist_edit_page.png" target="_blank">
+                  <img src="../assets/images/movie_log/watchlist_edit_page.png">
+                </a>
+                <p style="text-align: center;">ウォッチリスト作成画面</p>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="section target-section" id="feature-sec">
+        <h2>機能一覧</h2>
+
+        <div class="section">
+          <h3>認証機能</h3>
+          <ul>
+            <li>アカウント登録・ログイン・ログアウトができる</li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h3>レビュー機能</h3>
+          <ul>
+            <li>映画のレビューを作成できる（評価・感想・視聴日）</li>
+            <li>投稿したレビューの一覧を確認できる</li>
+            <li>レビューの並べ替えができる（作成日・評価・タイトル順）</li>
+            <li>レビューの詳細を確認できる</li>
+            <li>レビューの編集・削除ができる</li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h3>ウォッチリスト機能</h3>
+          <ul>
+            <li>観たい映画をウォッチリストに追加できる（優先度・メモ付き）</li>
+            <li>ウォッチリストを一覧で確認できる</li>
+            <li>並べ替えによって優先度を整理できる</li>
+            <li>視聴済みの作品をチェックできる</li>
+            <li>ウォッチリストから削除できる</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="section target-section" id="tech-sec">
+        <h2>使用技術・選定理由</h2>
+
+          <div class="section2">
+            <h3>フロントエンド</h3>
+            <ul>
+              <li><strong>React</strong>: UIをコンポーネント化し、再利用性・保守性を高めるため採用</li>
+              <li><strong>TypeScript</strong>: 型安全性を確保し、開発時のバグを減らすため採用</li>
+              <li><strong>Vite</strong>: 高速な開発環境を構築するためのビルドツールとして使用</li>
+              <li><strong>Tailwind CSS / shadcn/ui</strong>: 既存コンポーネントを利用し、UIを効率的に構築するために使用</li>
+            </ul>
+          </div>
+
+          <div class="section2">
+            <h3>バックエンド</h3>
+            <ul>
+              <li><strong>Spring Boot / Java</strong>: REST API設計を意識したバックエンド開発経験を得るため採用</li>
+              <li><strong>Gradle(Kotlin DSL)</strong>: ビルドおよび依存関係管理に使用</li>
+            </ul>
+
+            <hr>
+            <p style="font-weight: bold;">主要ライブラリ</p>
+            <ul>
+              <li><strong>Spring Web</strong>: REST APIの実装に使用</li>
+              <li><strong>Spring Security</strong>: 認証・認可の実装に使用</li>
+              <li><strong>Spring Data JPA</strong>: データベース操作の簡略化のため使用</li>
+            </ul>
+          </div>
+
+          <div class="section2">
+            <h3>データベース</h3>
+            <ul>
+              <li><strong>PostgreSQL</strong>: リレーショナルデータの管理およびTEXT型・JSON型の活用のため採用</li>
+            </ul>
+          </div>
+
+          <div class="section2">
+            <h3>インフラ</h3>
+            <ul>
+              <li><strong>Render (Web service)</strong>: バックエンドのデプロイ先に使用</li>
+              <li><strong>Render (PostgreSQL)</strong>: データベースのホスティングに使用</li>
+              <li><strong>Vercel</strong>: フロントエンドのホスティングに使用</li>
+            </ul>
+          </div>
+
+          <div class="section2">
+            <h3>その他</h3>
+            <ul>
+              <li><strong>The Movie Database API</strong>: 映画情報の取得に使用</li>
+              <li><strong>Flyway</strong>: データベースマイグレーションツール</li>
+            </ul>
+          </div>
+
+      </div>
+
+      <div class="section target-section" id="lesson-sec">
+        <h2>苦労した点・学んだこと</h2>
+
+        <div class="section">
+          <h3>設計及びそのドキュメント化</h3>
+          <p>
+            本アプリの開発では、まず最初にデータベース設計とAPI設計を行ってから実装するという手順を初めて行いました。
+          </p><p>
+            この経験を通して、REST API設計の基本や、ユーザーの操作フローを考慮したAPI設計、
+            効率的なデータベース設計などを学ぶことができました。
+          </p><p>
+            また、これらの設計を初期段階からドキュメントとして整理し、
+            仕様変更時にも更新することで、開発を効率的に進めることができました。
+            特にフロントエンド実装の際にAPI設計を参照できたことで開発がスムーズに進み、
+            ドキュメントが整理されていることの重要性を実感しました。
+          </p>
+        </div>
+
+        <div class="section">
+          <h3>認証機能の実装</h3>
+          <p>
+            Spring Securityを用いて認証機能を実装しましたが、CORS設定やCookieの扱いに苦労しました。
+          </p><p>
+            特にフロントエンドとバックエンドの通信がうまく行かず、
+            ブラウザの挙動や認証フローについて調査した上で取り組んだ結果、解決できました。
+          </p><p>
+            この経験から、バックエンドでの実装だけでなく、
+            ブラウザや通信設定を含めた認証機能の理解を深めることができました。
+          </p>
+        </div>
+
+        <div class="section">
+          <h3>デプロイ</h3>
+          <p>
+            RenderやVercelを用いたクラウド環境へのデプロイを初めて行いました。
+            ローカル環境では問題なく動作していた機能が、
+            本番環境ではCookie設定などの違いにより動作しないケースを経験し、
+            デプロイにおいては環境毎の違いを把握する必要があると学びました。
+          </p><p>
+            また、データベースのホスティングでは、当初はSupabaseを使用する予定でしたが、
+            Renderとの接続要件の問題により構成を変更しました。
+            この経験から、技術選定においては機能だけでなく、
+            インフラやサービス間の制約も考慮する必要があると学びました。
+          </p>
+        </div>
+
+        <div class="section">
+          <h3>Reactを用いたフロントエンド設計</h3>
+          <p>
+            Reactによるフロントエンド開発に初めて本格的に取り組みました。
+          </p><p>
+            フロントエンドはバックエンドに比べて実装の自由度が高い分、
+            コードの構造や責務の分割を適切に設計する難しさを感じました。
+          </p><p>
+            また、画面仕様の実現に伴いAPIの追加や変更が必要になる場面が多く、
+            設計段階で全てを予測して網羅することの難しさを実感しました。
+          </p><p>
+            今後はリファクタリングやツールの導入を通して、
+            より保守性の高いフロントエンド開発を行いたいと考えています。
+          </p>
+        </div>
+
+      </div>
+
+      <div class="section target-section" id="dev-sec">
+        <h2>今後の開発予定</h2>
+
+        <div class="section">
+          <h3>機能追加予定</h3>
+          <div style="display: flex;">
+
+            <div style="flex: 1;">
+
+              <div class="section">
+                <p style="font-weight: bold;">認証機能</p>
+                <ul>
+                  <li>メールアドレス認証機能の追加</li>
+                  <li>パスワードリセット機能の実装</li>
+                </ul>
+              </div>
+
+              <div class="section">
+                <p style="font-weight: bold;">レビュー機能</p>
+                <ul>
+                  <li>ユーザー定義可能なジャンルタグ機能の実装</li>
+                  <li>評価を表現するレーダーチャート機能の追加</li>
+                </ul>
+              </div>
+
+            </div>
+
+            <div style="flex: 1;">
+
+              <div class="section">
+                <p style="font-weight: bold;">映画情報機能</p>
+                <ul>
+                  <li>映画詳細情報の拡張（ジャンル・シリーズ・制作国など）</li>
+                  <li>監督・キャスト情報の表示</li>
+                  <li>監督・キャストによる検索・ソート機能の追加</li>
+                </ul>
+              </div>
+
+              <div class="section">
+                <p style="font-weight: bold;">シェア機能</p>
+                <ul>
+                  <li>レビュー内容を画像として生成し、エクスポートできる機能の実装</li>
+                </ul>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="section">
+          <h3>改善予定</h3>
+          <div style="display: flex;">
+
+            <div style="flex: 1;">
+
+              <div class="section">
+                <p style="font-weight: bold;">認証・セキュリティ</p>
+                <ul>
+                  <li>認証処理の安定化のため、セッションベース認証からJWT認証に変更</li>
+                </ul>
+              </div>
+
+              <div class="section">
+                <p style="font-weight: bold;">インフラ・データ管理</p>
+                <ul>
+                  <li>データ永続性のため、データベースをRenderからNeonに変更</li>
+                  <li>キャッシュデータの肥大化防止のため、無期限保存からTTLによる管理に変更</li>
+                </ul>
+              </div>
+
+            </div>
+
+            <div style="flex: 1;">
+
+              <div class="section">
+                <p style="font-weight: bold;">バックエンド設計</p>
+                <ul>
+                  <li>レビュー情報取得時のデータ構造を見直し、DTO設計を整理・最適化</li>
+                </ul>
+              </div>
+
+              <div class="section">
+                <p style="font-weight: bold;">フロントエンド・UX</p>
+                <ul>
+                  <li>エラーページの実装によるUX向上</li>
+                  <li>コンポーネント構成や責務の見直しによる可読性・保守性の向上</li>
+                  <li>OpenAPIを利用してAPIレスポンスの型定義を自動生成することで、型安全性を高める</li>
+                </ul>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="section">
+          <h3>導入予定技術</h3>
+          <ul>
+            <li><strong>Docker</strong>: 開発環境およびデプロイ環境の統一のため</li>
+            <li><strong>GitHub actions</strong>: /CDの仕組みを理解するために導入し、簡単な自動化から実装</li>
+            <li><strong>OpenAPI</strong>: API仕様を元に型定義を自動生成し、フロントエンドとの型の不整合を防ぐため</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="section target-section" id="doc-sec">
+        <h3>開発ドキュメント</h3>
+        <p>
+          GitHubリポジトリ内にある、各種ドキュメントへのリンクです。
+        </p>
+
+        <div>
+          <ul>
+            <li>
+              <a href="https://github.com/kotonekanno/movie-review-log/" target="_blank" rel="noopener">
+                README.md
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/kotonekanno/movie-review-log/CHANGELOG.md" target="_blank" rel="noopener">
+                リリースノート
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/kotonekanno/movie-review-log/docs/api-design.md" target="_blank" rel="noopener">
+                API設計
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/kotonekanno/movie-review-log/docs/db-design.md" target="_blank" rel="noopener">
+                データ設計
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/kotonekanno/movie-review-log/docs/directory-structure.md" target="_blank" rel="noopener">
+                ディレクトリ構成
+              </a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+    <footer style="text-align: center;">
+      <p>© 2026　簡野 琴音 - ポートフォリオ　|　最終更新日: 2026-03-31</p>
+    </footer>
+  </body>
+  <script src="../assets/javascript/common.js"></script>
+</html>
