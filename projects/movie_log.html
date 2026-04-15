@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>簡野 琴音 - ポートフォリオ</title>
     <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="icon" href="../favicon.png" type="image/png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
   </head>
   <style>
@@ -444,20 +445,32 @@
                 </ul>
               </div>
 
+              <div class="section">
+                <p style="font-weight: bold;">バックエンド設計</p>
+                <ul>
+                  <li>ログ出力の整備
+                    <ul>
+                      <li>デバッグ・障害対応を目的とした標準出力ベースのログを実装</li>
+                    </ul>
+                  </li>
+                  <li class="done">レビュー情報取得時のデータ構造を見直し、DTO設計を整理・最適化</li>
+                </ul>
+              </div>
+
             </div>
 
             <div style="flex: 1;">
 
               <div class="section">
-                <p style="font-weight: bold;">バックエンド設計</p>
-                <ul>
-                  <li>レビュー情報取得時のデータ構造を見直し、DTO設計を整理・最適化</li>
-                </ul>
-              </div>
-
-              <div class="section">
                 <p style="font-weight: bold;">フロントエンド・UX</p>
                 <ul>
+                  <li>例外処理の整備
+                    <ul>
+                      <li>現在の簡易的なエラーハンドリングから脱却し、例外ベースの設計へ改善</li>
+                      <li>カスタム例外クラスの導入により、エラー種別ごとのハンドリングを明確化</li>
+                      <li>非同期処理におけるエラーフローを整理し、予期しない挙動を防止</li>
+                    </ul>
+                  </li>
                   <li>エラーページの実装によるUX向上</li>
                   <li>コンポーネント構成や責務の見直しによる可読性・保守性の向上</li>
                   <li>OpenAPIを利用してAPIレスポンスの型定義を自動生成することで、型安全性を高める</li>
@@ -520,7 +533,7 @@
       </div>
 
     <footer style="text-align: center;">
-      <p>© 2026　簡野 琴音 - ポートフォリオ　|　最終更新日: 2026-04-13</p>
+      <p>© 2026　簡野 琴音 - ポートフォリオ　|　最終更新日: 2026-04-15</p>
     </footer>
   </body>
   <script src="../assets/javascript/common.js"></script>

@@ -25,7 +25,10 @@ img {
   border: 1px solid black;
 }
 
-.disabled { color: gray; }
+.done{
+  text-decoration: line-through;
+  color: gray;
+}
 
 .container {
   width: 900px;
@@ -239,8 +242,6 @@ img {
   transform: translateX(10px);
   pointer-events: none;
   transition: opacity .2s ease, transform .2s ease;
-}
-.toc-panel li {
 }
 #sticky-toc.open .toc-panel {
   opacity: 1;
