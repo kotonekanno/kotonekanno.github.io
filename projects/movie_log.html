@@ -40,7 +40,8 @@
             <li><a href="#demo-sec">デモ</a></li>
             <li><a href="#feature-sec">機能一覧</a></li>
             <li><a href="#tech-sec">使用技術・選定理由</a></li>
-            <li><a href="#lesson-sec">苦労した点・学んだこと</a></li>
+            <li><a href="#sp-sec">工夫した点</a></li>
+            <li><a href="#lesson-sec">苦労した点</a></li>
             <li><a href="#dev-sec">今後の開発予定</a></li>
             <li><a href="#doc-sec">開発ドキュメント</a></li>
           </ul>
@@ -62,7 +63,7 @@
             <i class="fa-solid fa-up-right-from-square"></i>
               デモ
           </a>
-          （<a href="#demo-sec"><i class="fa-solid fa-arrow-right"></i>利用方法</a>）
+          （<a href="#demo-sec"><i class="fa-solid fa-arrow-right"></i> 利用方法</a>）
         </span>
       </div>
 
@@ -102,7 +103,8 @@
               <li><a href="#demo-sec">デモ</a></li>
               <li><a href="#feature-sec">機能一覧</a></li>
               <li><a href="#tech-sec">使用技術・選定理由</a></li>
-              <li><a href="#lesson-sec">苦労した点・学んだこと</a></li>
+              <li><a href="#sp-sec">工夫した点</a></li>
+              <li><a href="#lesson-sec">苦労した点</a></li>
               <li><a href="#dev-sec">今後の開発予定</a></li>
               <li><a href="#doc-sec">開発ドキュメント</a></li>
             </ul>
@@ -132,7 +134,7 @@
               <h3>利用上の注意</h3>
               <ul>
                 <li>テスト用アカウントでのみ利用可能です</li>
-                <li>初回アクセス時に数秒かかる場合があります（Render無料プラン）</li>
+                <li>初回アクセス時に時間がかかる場合があります（Render無料プラン）</li>
               </ul>
             </div>
 
@@ -181,22 +183,29 @@
               </div>
 
               <div class="img-section">
-                <a href="../assets/images/movie_log/review_edit_page.png" target="_blank">
-                  <img src="../assets/images/movie_log/review_edit_page.png">
+                <a href="../assets/images/movie_log/review_details_page.png" target="_blank">
+                  <img src="../assets/images/movie_log/review_details_page.png">
                 </a>
-                <p>レビュー作成画面</p>
+                <p>レビュー詳細画面</p>
               </div>
 
               <div class="img-section">
-                <a href="../assets/images/movie_log/login_page.png" target="_blank">
-                  <img src="../assets/images/movie_log/login_page.png">
+                <a href="../assets/images/movie_log/review_edit_page.png" target="_blank">
+                  <img src="../assets/images/movie_log/review_edit_page.png">
                 </a>
-                <p>ログイン画面</p>
+                <p>レビュー編集画面</p>
               </div>
 
             </div>
 
             <div style="flex: 1;">
+
+              <div class="img-section">
+                <a href="../assets/images/movie_log/movie_search_page.png" target="_blank">
+                  <img src="../assets/images/movie_log/movie_search_page.png">
+                </a>
+                <p>映画検索画面</p>
+              </div>
 
               <div class="img-section">
                 <a href="../assets/images/movie_log/watchlist_page.png" target="_blank">
@@ -293,8 +302,8 @@
           <div class="section2">
             <h3>インフラ</h3>
             <ul>
-              <li><strong>Render (Web service)</strong>: バックエンドのデプロイ先に使用</li>
-              <li><strong>Render (PostgreSQL)</strong>: データベースのホスティングに使用</li>
+              <li><strong>Render</strong>: バックエンドのデプロイ先に使用</li>
+              <li><strong>Neon</strong>: データベースのホスティングに使用</li>
               <li><strong>Vercel</strong>: フロントエンドのホスティングに使用</li>
             </ul>
           </div>
@@ -309,34 +318,78 @@
 
       </div>
 
-      <div class="section target-section" id="lesson-sec">
-        <h2>苦労した点・学んだこと</h2>
+      <div class="section target-section" id="sp-sec">
+        <h2>工夫した点</h2>
 
         <div class="section">
-          <h3>設計及びそのドキュメント化</h3>
+          <h3>UXを意識した画面設計</h3>
           <p>
-            本アプリの開発では、まず最初にデータベース設計とAPI設計を行ってから実装するという手順を初めて行いました。
+            本アプリの主要な機能であるレビューとウォッチリストについて、
+            それぞれでユーザーの利用目的が異なることを考慮して、画面設計を分離しました。
           </p><p>
-            この経験を通して、REST API設計の基本や、ユーザーの操作フローを考慮したAPI設計、
-            効率的なデータベース設計などを学ぶことができました。
+            レビュー画面は「鑑賞後にゆったりと振り返ること」「レビューをじっくり読み返すこと」を目的としているため、
+            一覧・詳細・作成ページを分離し、映画の詳細情報と合わせて閲覧できる構成にすることで、
+            リッチなUXを意識した設計としました。
           </p><p>
-            また、これらの設計を初期段階からドキュメントとして整理し、
-            仕様変更時にも更新することで、開発を効率的に進めることができました。
-            特にフロントエンド実装の際にAPI設計を参照できたことで開発がスムーズに進み、
-            ドキュメントが整理されていることの重要性を実感しました。
+            一方、ウォッチリストはその場で素早く追加・確認する用途が中心であるため、
+            一覧ページのみのシンプルな構造、画面遷移を伴わない編集ダイアログで構成することで、
+            利便性を意識したシンプルな設計としました。
+          </p><p>
+            これにより、「思考の深さ」と「操作の速さ」という異なるUX要件をそれぞれ叶える画面設計を実現しました。
           </p>
         </div>
 
         <div class="section">
+          <h3>キャッシュ設計</h3>
+          <p>
+            当初、映画の詳細情報は外部APIから取得したものを全てデータベースにキャッシュし、永続化していました。
+            しかし、全てのデータの永続キャッシュ化はデータベースの容量を圧迫するだけでなく、
+            外部APIを利用するメリット自体が失われると気づいたため、構成を変更しました。
+          </p><p>
+            高頻度で利用される基本情報（映画のタイトルなど）は永続化し、
+            利用頻度が低い詳細情報は7日間の期限を設けることで、
+            アクセスの高速化とデータベースの最適化の両方を実現しました。
+          </p>
+          <p>
+            また、期限を過ぎた情報の削除処理については、
+            デプロイ先がRender無料プランであることから使用していない間はサーバーがスリープ状態となるため、
+            削除処理の定期実行ができないという制約がありました。
+          </p><p>
+            そのため、ログイン処理が行われる際に一定確率で削除処理が実行されるように設計し、
+            本サービスの利用頻度を考慮した確率を設定しました。
+          </p>
+        </div>
+
+        <div class="section">
+          <h3>開発環境の最適化</h3>
+          <p>
+            本アプリの開発においては、データベース設計やAPI設計をドキュメント化して管理し、
+            開発を体系的に進めることを最も意識しました。
+            設計を初期段階からドキュメントとして整理し、仕様変更時にも更新することで、
+            開発を効率的に進めました。
+          </p><p>
+            特にフロントエンド実装の際に、API設計を参照しながら取り組むことで開発がスムーズに進み、
+            ドキュメントの重要性を実感しました。
+          </p>
+        </div>
+
+      </div>
+
+      <div class="section target-section" id="lesson-sec">
+        <h2>苦労した点</h2>
+
+        <div class="section">
           <h3>認証機能の実装</h3>
           <p>
-            Spring Securityを用いて認証機能を実装しましたが、CORS設定やCookieの扱いに苦労しました。
+            Spring Securityを用いて認証機能を実装しました。
+            当初はセッションベースの認証方式を採用し、Cookieを用いた状態管理を行っていましたが、
+            CORS設定やCookieの扱いに課題がありました。
           </p><p>
-            特にフロントエンドとバックエンドの通信がうまく行かず、
-            ブラウザの挙動や認証フローについて調査した上で取り組んだ結果、解決できました。
+            特にブラウザのシークレットモード等の環境においてCookieが期待通りに送信されない状況が続いたため、
+            JWTベースの認証方式へ移行し、API通信をCookieに依存しない形に変更しました。
           </p><p>
-            この経験から、バックエンドでの実装だけでなく、
-            ブラウザや通信設定を含めた認証機能の理解を深めることができました。
+            この経験を通して、バックエンドでの実装だけでなく、
+            HTTP通信・Cookie・ブラウザごとの制約を含めた認証処理の理解を深めることができました。
           </p>
         </div>
 
@@ -387,6 +440,8 @@
                 <ul>
                   <li>メールアドレス認証機能の追加</li>
                   <li>パスワードリセット機能の実装</li>
+                  <li>アカウント削除機能の追加</li>
+                  <li>Google OAuth認証機能の導入</li>
                 </ul>
               </div>
 
@@ -405,7 +460,7 @@
               <div class="section">
                 <p style="font-weight: bold;">映画情報機能</p>
                 <ul>
-                  <li>映画詳細情報の拡張（ジャンル・シリーズ・制作国など）</li>
+                  <li>映画詳細情報の拡張</li>
                   <li>監督・キャスト情報の表示</li>
                   <li>監督・キャストによる検索・ソート機能の追加</li>
                 </ul>
@@ -415,6 +470,13 @@
                 <p style="font-weight: bold;">シェア機能</p>
                 <ul>
                   <li>レビュー内容を画像として生成し、エクスポートできる機能の実装</li>
+                </ul>
+              </div>
+
+              <div class="section">
+                <p style="font-weight: bold;">課金機能</p>
+                <ul>
+                  <li>決済処理にStripeを利用</li>
                 </ul>
               </div>
 
@@ -433,15 +495,15 @@
               <div class="section">
                 <p style="font-weight: bold;">認証・セキュリティ</p>
                 <ul>
-                  <li>認証処理の安定化のため、セッションベース認証からJWT認証に変更</li>
+                  <li class="done">認証処理の安定化のため、セッションベース認証からJWT認証に変更</li>
                 </ul>
               </div>
 
               <div class="section">
                 <p style="font-weight: bold;">インフラ・データ管理</p>
                 <ul>
-                  <li>データ永続性のため、データベースをRenderからNeonに変更</li>
-                  <li>キャッシュデータの肥大化防止のため、無期限保存からTTLによる管理に変更</li>
+                  <li class="done">データ永続性のため、データベースをRenderからNeonに変更</li>
+                  <li class="done">キャッシュデータの肥大化防止のため、無期限保存からTTLによる管理に変更</li>
                 </ul>
               </div>
 
@@ -471,9 +533,9 @@
                       <li>非同期処理におけるエラーフローを整理し、予期しない挙動を防止</li>
                     </ul>
                   </li>
-                  <li>エラーページの実装によるUX向上</li>
                   <li>コンポーネント構成や責務の見直しによる可読性・保守性の向上</li>
                   <li>OpenAPIを利用してAPIレスポンスの型定義を自動生成することで、型安全性を高める</li>
+                  <li class="done">エラーページの実装によるUX向上</li>
                 </ul>
               </div>
 
@@ -503,13 +565,13 @@
         <div>
           <ul>
             <li>
-              <a href="https://github.com/kotonekanno/movie-review-log/" target="_blank" rel="noopener">
+              <a href="https://github.com/kotonekanno/movie-review-log/blob/main/README.md" target="_blank" rel="noopener">
                 README.md
               </a>
             </li>
             <li>
               <a href="https://github.com/kotonekanno/movie-review-log/blob/main/CHANGELOG.md" target="_blank" rel="noopener">
-                リリースノート
+                更新履歴
               </a>
             </li>
             <li>
@@ -533,7 +595,7 @@
       </div>
 
     <footer style="text-align: center;">
-      <p>© 2026　簡野 琴音 - ポートフォリオ　|　最終更新日: 2026-04-15</p>
+      <p>© 2026　簡野 琴音 - ポートフォリオ　|　最終更新日: 2026-04-28</p>
     </footer>
   </body>
   <script src="../assets/javascript/common.js"></script>
