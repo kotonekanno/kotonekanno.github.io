@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>簡野 琴音 - ポートフォリオ</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="icon" href="../favicon.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  </head>
+  <style>
+  </style>
+  <body>
+    <div class="header" style="padding-top: 10px;">
+      <div class="container">
+        <h1 style="font-size: 32px;">簡野 琴音 (Kotone Kanno)</h1>
+        <p style="margin-bottom: 25px;">大学2年 / ソフトウェアエンジニア志望</p>
+        <div style="padding-bottom: 15px;">
+          <span class="tag">サイバー大学 IT総合学部</span>
+          <span class="tag">卒業見込み: 2028年3月</span>
+          <span class="tag">就活: エンジニア職</span>
+        </div>
+      </div>
+    </div>
+    <div class="header" id="sticky-header">
+      <div class="container" id="menu-bar">
+        <a href="../index.html"><p class="menu enabled">ホーム</p></a>
+        <a href="../profile.html"><p class="menu enabled">プロフィール</p></a>
+        <a href="../projects.html"><p class="menu enabled" style="color: white; font-weight: bold;">プロジェクト</p></a>
+        <a href="../study_log.html"><p class="menu enabled">学習記録</p></a>
+      </div>
+    </div>
+
+    <div id="sticky-toc">
+      <div class="toc-area">
+        <button class="icon-btn"><i class="fa-solid fa-bars"></i></button>
+        <div class="section toc-panel" style="width: max-content;">
+          <h3>目次</h3>
+          <ul>
+            <li><a href="#top-sec">ページトップ</a></li>
+            <li><a href="#feature-sec">機能一覧</a></li>
+            <li><a href="#tech-sec">使用技術・選定理由</a></li>
+            <li><a href="#dev-sec">拡張予定</a></li>
+            <li><a href="#doc-sec">開発ドキュメント</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container" style="margin-top: -60px;">
+      <h1 id="top-sec" style="scroll-margin-top: 60px; text-align: center;">就活管理アプリ（開発中）</h1>
+      <div style="margin-bottom: 20px; text-align: center;">
+        <span style="margin-left: 10px; margin-right: 30px;">
+          <a href="https://github.com/kotonekanno/job-hunt-workspace" target="_blank" rel="noopener">
+            <i class="fa-solid fa-up-right-from-square"></i>
+              GitHubリポジトリ
+          </a>
+        </span>
+      </div>
+
+      <div class="section">
+        <h2>概要</h2>
+        <p>本アプリは、就活生向けのスケジュール・タスク・ドキュメント管理アプリです。</p>
+      
+        <hr>
+
+        <div style="display: flex;">
+
+          <div class="inner-section" style="flex: 3; margin-right: 50px;">
+
+            <div>
+              <h3>対応予定プラットフォーム</h3>
+              <ul>
+                <li>PCブラウザ</li>
+                <li>iPhoneアプリ（開発予定）</li>
+              </ul>
+            </div>
+
+          </div>
+
+          <div class="section" style="flex: 2; width: max-content;">
+            <h3>目次</h3>
+            <ul>
+              <li><a href="#feature-sec">機能一覧</a></li>
+              <li><a href="#tech-sec">使用技術・選定理由</a></li>
+              <li><a href="#dev-sec">拡張予定</a></li>
+              <li><a href="#doc-sec">開発ドキュメント</a></li>
+            </ul>
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="section target-section" id="feature-sec">
+        <h2>機能一覧</h2>
+
+        <div class="section">
+          <h3>カレンダー機能</h3>
+          <ul>
+            <li>就活に関するスケジュールを登録できる</li>
+            <li>イベントの種類（説明会、選考等）、企業によってスケジュールをフィルターできる</li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h3>企業情報管理機能</h3>
+          <ul>
+            <li>企業に関する情報を表形式で記録できる</li>
+            <li>企業に関するメモをMarkdown形式で記録できる</li>
+            <li>企業の選考ステップと合否を記録できる</li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h3>タスク管理機能</h3>
+          <ul>
+            <li>就活に関するタスクをチェックリスト形式で管理できる</li>
+            <li>タスクを期限によって並べ替えできる</li>
+            <li>企業によってタスクをフィルターできる</li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h3>ES管理機能</h3>
+          <ul>
+            <li>これまでに書いたエントリーシートを記録できる</li>
+            <li>設問カテゴリごとに回答を分類できる</li>
+            <li>キーワードから文章を検索できる</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="section target-section" id="tech-sec">
+        <h2>使用技術・選定理由</h2>
+
+          <div class="section2">
+            <h3>フロントエンド</h3>
+            <ul>
+              <li><strong>React</strong>: SPAによる操作性を実現するとともに、コンポーネント化で再利用性・保守性を高めるため採用</li>
+              <li><strong>TypeScript</strong>: 型安全性を確保し、開発時のバグを減らすため採用</li>
+              <li><strong>Vite</strong>: 高速な開発環境を構築するためのビルドツールとして使用</li>
+              <li><strong>Tailwind CSS / shadcn/ui</strong>: 既存コンポーネントを利用し、UIを効率的に構築するために使用</li>
+            </ul>
+          </div>
+
+          <div class="section2">
+            <h3>バックエンド</h3>
+            <ul>
+              <li><strong>Spring Boot / Java</strong>: REST API設計を意識したバックエンド開発経験を得るため採用</li>
+              <li><strong>Gradle(Kotlin DSL)</strong>: ビルドおよび依存関係管理に使用</li>
+            </ul>
+
+            <hr>
+            <p style="font-weight: bold;">主要ライブラリ</p>
+            <ul>
+              <li><strong>Spring Web</strong>: REST APIの実装に使用</li>
+              <li><strong>Spring Security</strong>: 認証・認可の実装に使用</li>
+              <li><strong>Spring Data JPA</strong>: データベース操作の簡略化のため使用</li>
+            </ul>
+          </div>
+
+          <div class="section2">
+            <h3>データベース</h3>
+            <ul>
+              <li><strong>PostgreSQL</strong>: リレーショナルデータの管理およびTEXT型・JSON型の活用のため採用</li>
+            </ul>
+          </div>
+
+      </div>
+
+      <div class="section target-section" id="dev-sec">
+        <h2>拡張予定</h2>
+
+        <div class="section">
+          <h3>機能追加予定</h3>
+          <div style="display: flex;">
+
+            <div style="flex: 1;">
+
+              <div class="section">
+                <p style="font-weight: bold;">認証機能</p>
+                <ul>
+                  <li>アカウントやGitHubのアカウントによるログイン</li>
+                </ul>
+              </div>
+
+              <div class="section">
+                <p style="font-weight: bold;">AI機能</p>
+                <ul>
+                  <li>過去のES回答に基づき、新しい設問への回答案を生成</li>
+                </ul>
+              </div>
+
+            </div>
+
+            <div style="flex: 1;">
+
+              <div class="section">
+                <p style="font-weight: bold;">通知機能</p>
+                <ul>
+                  <li>スマホアプリ通知</li>
+                  <li>LINE通知</li>
+                  <li>メール通知</li>
+                </ul>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="section target-section" id="doc-sec">
+        <h3>開発ドキュメント</h3>
+        <p>
+          GitHubリポジトリ内にある、各種ドキュメントへのリンクです。
+        </p>
+
+        <div>
+          <ul>
+            <li>
+              <a href="https://github.com/kotonekanno/job-hunt-workspace/blob/main/README.md" target="_blank" rel="noopener">
+                README.md
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/kotonekanno/job-hunt-workspace/blob/main/docs/db-design.md" target="_blank" rel="noopener">
+                データベース設計
+              </a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+    <footer style="text-align: center;">
+      <p>© 2026　簡野 琴音 - ポートフォリオ　|　最終更新日: 2026-06-25</p>
+    </footer>
+  </body>
+  <script src="../assets/javascript/common.js"></script>
+</html>

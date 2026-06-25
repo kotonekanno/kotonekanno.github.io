@@ -67,6 +67,23 @@ img {
   margin-top: 4px;
   border-radius: 6px;
 }
+.tag4 {
+  background: gray;
+  color: white;
+  font-size: 0.7em;
+  padding: 2px 6px;
+  margin-top: 2px;
+  border-radius: 6px;
+}
+.tag5 {
+  background: gray;
+  color: white;
+  font-size: 0.7em;
+  padding: 2px 10px;
+  margin-top: 4px;
+  border-radius: 6px;
+  box-shadow:  1px 1px 5px gray;
+}
 
 #sticky-header {
   position: sticky;
