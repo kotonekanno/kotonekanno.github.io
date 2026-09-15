@@ -308,3 +308,43 @@ details ul {
 details > *:not(summary) {
   padding-left: 40px;
 }
+
+.experience-card > summary {
+  display: block;
+  margin: -5px -15px -15px -20px;
+  padding: 5px 15px 15px 20px;
+  border-radius: 10px;
+  color: inherit;
+  list-style: none;
+}
+.experience-card > summary::-webkit-details-marker {
+  display: none;
+}
+.experience-card[open] > summary {
+  font-weight: normal;
+}
+.experience-card > summary:hover {
+  color: inherit;
+  background-color: #fafafa;
+}
+.experience-card > summary:focus-visible {
+  outline: 2px solid rgb(116, 32, 32);
+  outline-offset: 3px;
+}
+.experience-toggle {
+  display: block;
+  margin-top: 10px;
+  color: rgb(116, 32, 32);
+  font-size: 0.9rem;
+  text-align: right;
+}
+.experience-card .experience-hide,
+.experience-card[open] .experience-show {
+  display: none;
+}
+.experience-card[open] .experience-hide {
+  display: inline;
+}
+.experience-card > .experience-content {
+  padding-left: 0;
+}
