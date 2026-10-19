@@ -37,8 +37,10 @@
           <h3>目次</h3>
           <ul>
             <li><a href="#top-sec">ページトップ</a></li>
+            <li><a href="#demo-sec">デモ</a></li>
             <li><a href="#feature-sec">機能一覧</a></li>
             <li><a href="#tech-sec">使用技術・選定理由</a></li>
+            <li><a href="#lesson-sec">苦労した点</a></li>
             <li><a href="#dev-sec">拡張予定</a></li>
             <li><a href="#doc-sec">開発ドキュメント</a></li>
           </ul>
@@ -47,7 +49,7 @@
     </div>
 
     <div class="container" style="margin-top: -60px;">
-      <h1 id="top-sec" style="scroll-margin-top: 60px; text-align: center;">就活管理アプリ（開発中）</h1>
+      <h1 id="top-sec" style="scroll-margin-top: 60px; text-align: center;">就活管理アプリ</h1>
       <div style="margin-bottom: 20px; text-align: center;">
         <span style="margin-left: 10px; margin-right: 30px;">
           <a href="https://github.com/kotonekanno/job-hunt-workspace" target="_blank" rel="noopener">
@@ -55,12 +57,25 @@
               GitHubリポジトリ
           </a>
         </span>
+        <span>
+          <a href="https://job-hunt-workspace.kotonekanno0414.workers.dev/" target="_blank" rel="noopener">
+            <i class="fa-solid fa-up-right-from-square"></i>
+              デモ
+          </a>
+          （<a href="#demo-sec"><i class="fa-solid fa-arrow-right"></i> 利用方法</a>）
+        </span>
       </div>
 
       <div class="section">
         <h2>概要</h2>
-        <p>本アプリは、就活生向けのスケジュール・タスク・ドキュメント管理アプリです。</p>
-      
+        <p>
+          本アプリは、就活に関する企業情報・選考状況・スケジュール・タスク等を一元管理できるWebアプリケーションです。
+        </p>
+        <p>
+          複数企業の選考を並行して進める中で、情報が分散することによる管理の煩雑さを解消し、
+          効率的に就職活動を進められるようにすることを目的としています。
+        </p>
+
         <hr>
 
         <div style="display: flex;">
@@ -68,10 +83,19 @@
           <div class="inner-section" style="flex: 3; margin-right: 50px;">
 
             <div>
-              <h3>対応予定プラットフォーム</h3>
+              <h3>ターゲット</h3>
               <ul>
-                <li>PCブラウザ</li>
-                <li>iPhoneアプリ（開発予定）</li>
+                <li>複数企業の選考を並行して進めている就活生</li>
+                <li>企業情報や選考状況、スケジュール等をまとめて管理したい就活生</li>
+              </ul>
+            </div>
+
+            <div>
+              <h3>解決したい課題</h3>
+              <ul>
+                <li>企業情報や選考履歴、メモ等が複数のツールに分散しており、確認や管理に手間がかかる</li>
+                <li>複数企業の選考を並行して進める中で、各企業の選考状況や今後の予定を把握しづらい</li>
+                <li>ESの回答や面接対策の内容を蓄積・整理し、別の企業の選考でも再利用したい</li>
               </ul>
             </div>
 
@@ -80,11 +104,127 @@
           <div class="section" style="flex: 2; width: max-content;">
             <h3>目次</h3>
             <ul>
+            <li><a href="#demo-sec">デモ</a></li>
               <li><a href="#feature-sec">機能一覧</a></li>
               <li><a href="#tech-sec">使用技術・選定理由</a></li>
+            <li><a href="#lesson-sec">苦労した点</a></li>
               <li><a href="#dev-sec">拡張予定</a></li>
               <li><a href="#doc-sec">開発ドキュメント</a></li>
             </ul>
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="section target-section" id="demo-sec">
+        <h2>デモ</h2>
+
+        <div style="display: flex;">
+
+          <div style="flex: 1; display: flex; flex-direction: column;">
+
+            <div class="section" style="flex:1; display:flex; align-items:center; padding-top: 15px;">
+              <p>
+                <i class="fa-solid fa-globe"></i>
+                <a href="https://job-hunt-workspace.kotonekanno0414.workers.dev/" target="_blank" rel="noopener">
+                  https://job-hunt-workspace.kotonekanno0414.workers.dev/
+                </a>
+              </p>
+            </div>
+
+            <div class="section">
+              <h3>利用上の注意</h3>
+              <ul>
+                <li>右記のテスト用アカウントでのみ利用可能です</li>
+                <li>初回アクセス時に時間がかかる場合があります（Render無料プラン）</li>
+              </ul>
+            </div>
+
+          </div>
+
+          <div class="section" style="flex:  0 0 auto;">
+            <h3>テストアカウント</h3>
+            <table class="styled-table">
+              <thead>
+                <tr>
+                  <th>メールアドレス</th>
+                  <th>パスワード</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>test1@test.com</td>
+                  <td>testtest</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+        </div>
+
+        <div class="section">
+          <h3>スクリーンショット</h3>
+
+          <div style="display: flex;">
+
+            <div style="flex: 1;">
+
+              <div class="img-section">
+                <a href="../assets/images/job_hunt_workspace/home.png" target="_blank">
+                  <img src="../assets/images/job_hunt_workspace/home.png">
+                </a>
+                <p>ホーム画面</p>
+              </div>
+
+              <div class="img-section">
+                <a href="../assets/images/job_hunt_workspace/company_list.png" target="_blank">
+                  <img src="../assets/images/job_hunt_workspace/company_list.png">
+                </a>
+                <p>企業一覧画面</p>
+              </div>
+
+              <div class="img-section">
+                <a href="../assets/images/job_hunt_workspace/calendar.png" target="_blank">
+                  <img src="../assets/images/job_hunt_workspace/calendar.png">
+                </a>
+                <p>カレンダー画面</p>
+              </div>
+
+              <div class="img-section">
+                <a href="../assets/images/job_hunt_workspace/es_group.png" target="_blank">
+                  <img src="../assets/images/job_hunt_workspace/es_group.png">
+                </a>
+                <p>ESグループ画面</p>
+              </div>
+
+            </div>
+
+            <div style="flex: 1;">
+
+              <div class="img-section">
+                <a href="../assets/images/job_hunt_workspace/company_detail.png" target="_blank">
+                  <img src="../assets/images/job_hunt_workspace/company_detail.png">
+                </a>
+                <p>企業詳細画面</p>
+              </div>
+
+              <div class="img-section">
+                <a href="../assets/images/job_hunt_workspace/task.png" target="_blank">
+                  <img src="../assets/images/job_hunt_workspace/task.png">
+                </a>
+                <p>タスク管理画面</p>
+              </div>
+
+              <div class="img-section">
+                <a href="../assets/images/job_hunt_workspace/essay.png" target="_blank">
+                  <img src="../assets/images/job_hunt_workspace/essay.png">
+                </a>
+                <p>ES一覧画面</p>
+              </div>
+
+            </div>
+
           </div>
 
         </div>
@@ -95,37 +235,63 @@
         <h2>機能一覧</h2>
 
         <div class="section">
-          <h3>カレンダー機能</h3>
+          <h3>企業・選考管理</h3>
           <ul>
-            <li>就活に関するスケジュールを登録できる</li>
-            <li>イベントの種類（説明会、選考等）、企業によってスケジュールをフィルターできる</li>
+            <li>企業を登録し、志望度ごとに分類・並べ替えができる</li>
+            <li>企業ごとに以下の情報を一元管理できる
+              <ul>
+                <li>基本情報: 業界、従業員数、所在地など、任意の項目を登録・編集</li>
+                <li>企業メモ: 企業研究や面談で得た情報をMarkdown形式で保存</li>
+                <li>選考状況: 応募から内定までの選考フローをステップ単位で管理し、各ステップの結果・日時・メモを記録</li>
+                <li>やり取り履歴: 企業との連絡・手続きの履歴を日時やアクションの主体（企業／ユーザー）とともに記録</li>
+                <li>関連情報: 企業に紐づく予定やタスクをまとめて確認</li>
+              </ul>
+            </li>
           </ul>
         </div>
 
         <div class="section">
-          <h3>企業情報管理機能</h3>
+          <h3>スケジュール・タスク管理</h3>
           <ul>
-            <li>企業に関する情報を表形式で記録できる</li>
-            <li>企業に関するメモをMarkdown形式で記録できる</li>
-            <li>企業の選考ステップと合否を記録できる</li>
+            <li>カレンダー
+              <ul>
+                <li>面接・説明会・インターン等の予定を登録・管理</li>
+                <li>予定の種類や実施形式（オンライン／オフライン）を設定</li>
+                <li>説明会・インターンの参加予定・未定を管理</li>
+                <li>予定を企業に紐づけて管理</li>
+              </ul>
+            </li>
+            <li>タスク
+              <ul>
+                <li>ES提出や面接準備等のタスクを期限・メモとともに管理</li>
+                <li>企業への紐づけ、チェックリストによる進捗管理が可能</li>
+              </ul>
+            </li>
           </ul>
         </div>
 
         <div class="section">
-          <h3>タスク管理機能</h3>
+          <h3>ES・ドキュメント管理機能</h3>
           <ul>
-            <li>就活に関するタスクをチェックリスト形式で管理できる</li>
-            <li>タスクを期限によって並べ替えできる</li>
-            <li>企業によってタスクをフィルターできる</li>
+            <li>ES管理
+              <ul>
+                <li>エントリーシートの設問と回答をセットで保存</li>
+                <li>企業との紐づけや、ユーザー定義のグループによる分類が可能</li>
+                <li>志望動機・ガクチカ等、過去の回答を整理・再利用できる</li>
+              </ul>
+            </li>
+            <li>ドキュメント管理
+              <ul>
+                <li>自己分析や面接対策などの文書をMarkdown形式で作成・保存</li>
+              </ul>
+            </li>
           </ul>
         </div>
 
         <div class="section">
-          <h3>ES管理機能</h3>
+          <h3>認証・ユーザー管理</h3>
           <ul>
-            <li>これまでに書いたエントリーシートを記録できる</li>
-            <li>設問カテゴリごとに回答を分類できる</li>
-            <li>キーワードから文章を検索できる</li>
+            <li>アカウント登録・ログイン・ログアウト</li>
           </ul>
         </div>
 
@@ -137,10 +303,9 @@
           <div class="section2">
             <h3>フロントエンド</h3>
             <ul>
-              <li><strong>React</strong>: SPAによる操作性を実現するとともに、コンポーネント化で再利用性・保守性を高めるため採用</li>
+              <li><strong>React</strong>: UIをコンポーネント化し、再利用性・保守性を高めるため採用</li>
               <li><strong>TypeScript</strong>: 型安全性を確保し、開発時のバグを減らすため採用</li>
               <li><strong>Vite</strong>: 高速な開発環境を構築するためのビルドツールとして使用</li>
-              <li><strong>Tailwind CSS / shadcn/ui</strong>: 既存コンポーネントを利用し、UIを効率的に構築するために使用</li>
             </ul>
           </div>
 
@@ -163,9 +328,72 @@
           <div class="section2">
             <h3>データベース</h3>
             <ul>
-              <li><strong>PostgreSQL</strong>: リレーショナルデータの管理およびTEXT型・JSON型の活用のため採用</li>
+              <li><strong>PostgreSQL</strong>: リレーショナルデータの管理およびTEXT型の活用のため採用</li>
             </ul>
           </div>
+
+          <div class="section2">
+            <h3>インフラ</h3>
+            <ul>
+              <li><strong>Cloudflare Workers</strong>: フロントエンドのホスティングに使用</li>
+              <li><strong>Render</strong>: バックエンドのデプロイ先に使用</li>
+              <li><strong>Neon</strong>: PostgreSQLデータベースのホスティングに使用</li>
+            </ul>
+          </div>
+
+          <div class="section2">
+            <h3>その他</h3>
+            <ul>
+              <li><strong>Docker</strong>: 開発環境の構築およびコンテナ化に使用</li>
+              <li><strong>Flyway</strong>: データベースのスキーマ変更をマイグレーションファイルとして管理するため導入</li>
+              <li><strong>OpenAPI</strong>: API仕様の定義・ドキュメント化、およびフロントエンドの型定義・APIクライアント、バックエンドの型定義等を自動生成</li>
+            </ul>
+          </div>
+
+      </div>
+
+      <div class="section target-section" id="lesson-sec">
+        <h2>苦労した点</h2>
+
+        <div class="section">
+          <h3>データベース設計・ビジネスロジックの実装</h3>
+          <p>
+            本アプリでは、データの整合性を保ちながら、柔軟に情報を管理できる仕組みの設計に注力しました。
+          </p><p>
+            特に選考状況の管理では、前のステップが合格にならない限り次のステップに進めないよう、バックエンドで状態遷移を制御しました。
+          </p><p>
+            また、企業一覧などの並べ替え機能では、各レコードに一定間隔で整数のpositionを割り当て、並べ替え時には前後の値の中間値を設定する方式を考案・実装しました。
+            中間値を確保できなくなった場合のみ値を振り直すことで、更新対象を抑えられるよう工夫しました。
+          </p>
+        </div>
+
+        <div class="section">
+          <h3>API設計・OpenAPIの活用</h3>
+          <p>
+            本アプリでは、OpenAPIを導入し、API仕様からフロントエンドの型定義・APIクライアントとバックエンドの型定義を自動生成しました。
+            これにより、フロントエンドとバックエンドの仕様の不整合を防ぎ、保守性を高めることを目指しました。
+          </p><p>
+            API設計では、リソース間の関係をエンドポイントにどう反映するかに苦労しました。
+            そこで、企業に完全に従属する情報はネストしたパスで扱い、独立して管理できる情報はトップレベルのパスに配置し、企業との紐付けをクエリパラメータで指定する方針としました。
+          </p><p>
+            この経験から、API設計では各リソースの性質や利用方法を考慮し、一貫性のある構造にすることが重要だと学びました。
+          </p>
+        </div>
+
+        <div class="section">
+          <h3>コーディングエージェントを活用したフロントエンド開発</h3>
+          <p>
+            本アプリでは、初めてフロントエンドの実装を全面的にコーディングエージェントに任せる開発手法を実践しました。
+          </p><p>
+            まず、ディレクトリ構成やコーディング規約を指定した上で、画面要件を伝えてモックを作成させ、
+            その後、OpenAPIによるAPI定義の完成に合わせて実際のAPIとの連携も実装させました。
+          </p><p>
+            一方で、開発途中に新たな設計方針やルールを追加したことで、既存コードの修正や手戻りが発生する場面もありました。
+          </p><p>
+            この経験から、自分で設計・管理する部分とAIに実装を任せる部分の責任範囲を明確にし、
+            事前に方針や制約を整理することが、コーディングエージェントを効果的に活用する上で重要だと学びました。
+          </p>
+        </div>
 
       </div>
 
@@ -181,14 +409,16 @@
               <div class="section">
                 <p style="font-weight: bold;">認証機能</p>
                 <ul>
-                  <li>アカウントやGitHubのアカウントによるログイン</li>
+                  <li>メールアドレス認証機能の追加</li>
+                  <li>パスワードリセット機能の追加</li>
                 </ul>
               </div>
 
               <div class="section">
-                <p style="font-weight: bold;">AI機能</p>
+                <p style="font-weight: bold;">やりとり履歴の自動記録</p>
                 <ul>
-                  <li>過去のES回答に基づき、新しい設問への回答案を生成</li>
+                  <li>選考ステップの結果変更やタスクの完了等を契機に、企業とのやりとり履歴を自動追加する機能の実装</li>
+                  <li>例：一次面接の結果を「合格」に変更した際、企業からのアクションとして「一次面接 合格」を記録</li>
                 </ul>
               </div>
 
@@ -199,14 +429,40 @@
               <div class="section">
                 <p style="font-weight: bold;">通知機能</p>
                 <ul>
-                  <li>スマホアプリ通知</li>
-                  <li>LINE通知</li>
-                  <li>メール通知</li>
+                  <li>面接・説明会等の予定に対するリマインダー機能の実装</li>
+                  <li>タスクの期限に応じた通知機能の実装</li>
+                </ul>
+              </div>
+
+              <div class="section">
+                <p style="font-weight: bold;">ES×AI機能</p>
+                <ul>
+                  <li>保存したESの内容を元に、AIを利用して文章を生成・改善する機能の実装</li>
                 </ul>
               </div>
 
             </div>
 
+          </div>
+
+        </div>
+
+        <div style="display: flex;">
+
+          <div class="section" style="flex: 1;">
+            <h3>機能追加予定</h3>
+            <ul>
+              <li>バックエンドの自動テストの整備</li>
+              <li>ログの整備によるエラー調査・運用保守性の向上</li>
+              <li>UI・UXの改善</li>
+            </ul>
+          </div>
+
+          <div class="section" style="flex: 1;">
+            <h3>導入予定技術</h3>
+            <ul>
+              <li>GitHub Actions: ビルド・テスト等の自動化およびCI/CDの構築に利用予定</li>
+            </ul>
           </div>
 
         </div>
@@ -236,13 +492,18 @@
                 API仕様書
               </a>
             </li>
+            <li>
+              <a href="https://github.com/kotonekanno/job-hunt-workspace/blob/main/docs/features.md" target="_blank" rel="noopener">
+                機能一覧
+              </a>
+            </li>
           </ul>
         </div>
 
       </div>
 
     <footer style="text-align: center;">
-      <p>© 2026　簡野 琴音 - ポートフォリオ　|　最終更新日: 2026-10-13</p>
+      <p>© 2026　簡野 琴音 - ポートフォリオ　|　最終更新日: 2026-10-19</p>
     </footer>
   </body>
   <script src="../assets/javascript/common.js"></script>
